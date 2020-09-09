@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+
+</head>
+<body>
+<!--<nav>-->
+<!--  <a href="#/">快速开始</a>-->
+<!--  <a href="#/zh-cn/">侧边栏</a>-->
+<!--  <a href="#/zh-cn/guide">导航栏</a>-->
+<!--</nav>-->
+  <div id="app">
+
+  </div>
+  <script>
+    window.$docsify = {
+      // 加载 _sidebar.md 侧边栏
+      loadSidebar: true,
+
+      // 加载 自定义的侧边栏文件
+      //loadSidebar: 'summary.md',
+
+      // 加载默认 _navbar.md 导航栏文件
+      loadNavbar: true,
+
+      // 加载 自定义导航栏文件
+      //loadNavbar: 'nav.md',
+
+      //是否跳转页面顶部
+      auto2top: true,
+
+      // 入口文件改为 /home.md
+      //homepage: 'home.md',
+
+      // 文档和仓库根目录下的 README.md 内容一致
+      //homepage:
+      //       'https://raw.githubusercontent.com/docsifyjs/docsify/master/README.md',
+      //文档加载根路径
+      //basePath: '/path/',
+
+      //最大渲染标题层级
+      maxLevel: 6,
+      //图标
+      logo: '/qc.svg',
+      //主题色
+      themeColor: '#3f51b5',
+      //错误页面默认_404.md
+      notFoundPage: true,
+      //autoHeader: true,
+      //开启搜索
+      // search: 'auto', // 默认值
+      // search : [
+      //   '/',            // => /README.md
+      //   '/zh-cn',       // => /zh-cn/README.md
+      // ],
+
+      // 搜索完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: 'Type to search',
+
+        // 支持本地化
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Type to search'
+        },
+
+        noData: 'No Results!',
+
+        // 支持本地化
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
+
+        // 搜索标题的最大层级, 1 - 6
+        depth: 6,
+
+        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+        // 避免搜索索引冲突
+        // 同一域下的多个网站之间
+        namespace: 'website-1',
+
+        // 使用不同的索引作为路径前缀（namespaces）
+        // 注意：仅适用于 paths: 'auto' 模式
+        //
+        // 初始化索引时，我们从侧边栏查找第一个路径
+        // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+        pathNamespaces: ['/zh-cn', '/'],
+
+        // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+        // 匹配到的字符串将被用来识别索引
+        pathNamespaces: /^(\/(zh-cn))?(\/(v1|v2))?/
+      },
+
+      //显示最大的层级目录
+      subMaxLevel: 2,
+      //路由规则--- 真实目录-->路由路径
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      //统计字数
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
+      name: '文档',
+      //repo: 'https://github.com/'
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+</body>
+</html>
