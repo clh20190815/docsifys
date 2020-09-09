@@ -4,6 +4,7 @@
 .classpath
 .project
 .settings
+.idea
  ##filter databfile、sln file##
 *.mdb
 *.ldb
